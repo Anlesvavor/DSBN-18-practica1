@@ -11,4 +11,5 @@ import models.subtypes.Herbivorous;
  */
 
 public class Deer extends Herbivorous{
+
 }
