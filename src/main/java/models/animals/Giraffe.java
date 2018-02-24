@@ -1,5 +1,6 @@
 package models.animals;
 
+import models.enums.Dieta;
 import models.subtypes.Herbivorous;
 
 /**
@@ -11,4 +12,27 @@ import models.subtypes.Herbivorous;
  */
 
 public class Giraffe extends Herbivorous {
+
+    private Float longitudCuello;
+
+    public Giraffe() {
+        this.longitudCuello = 1.5f;
+    }
+
+    public Giraffe(Float longitudCuello) {
+        this.longitudCuello = longitudCuello;
+    }
+
+    public Giraffe(Boolean esRumiante, Dieta dieta, Float longitudCuello) {
+        super(esRumiante, dieta);
+        this.longitudCuello = longitudCuello;
+    }
+
+    public Float getLongitudCuello() {
+        return longitudCuello;
+    }
+
+    public void setLongitudCuello(Float longitudCuello) {
+        this.longitudCuello = longitudCuello;
+    }
 }

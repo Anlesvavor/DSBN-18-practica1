@@ -83,4 +83,9 @@ public class Animal {
     public void setHiberna(Boolean hiberna) {
         this.hiberna = hiberna;
     }
+
+    @Override
+    public String toString() {
+        return String.format("Hola soy un animal y mi genero es %s mi altura %s y mi peso %s", this.genero, this.altura,this.peso);
+    }
 }

@@ -1,5 +1,6 @@
 package models.animals;
 
+import models.enums.Caza;
 import models.subtypes.Carnivorous;
 
 /**
@@ -11,4 +12,40 @@ import models.subtypes.Carnivorous;
  */
 
 public class Owl extends Carnivorous {
+
+    private Float envergadura;
+    private Boolean esDeRapiña;
+
+    public Owl(Float envergadura, Boolean esDeRapiña) {
+        this.envergadura = envergadura;
+        this.esDeRapiña = esDeRapiña;
+    }
+
+    public Owl(Caza caza, Float envergadura, Boolean esDeRapiña) {
+        super(caza);
+        this.envergadura = envergadura;
+        this.esDeRapiña = esDeRapiña;
+    }
+
+    public Owl(Caza caza, Boolean zarpado, Boolean dentado, Float tasaDeExito, Integer caceriasMensuales, Float envergadura, Boolean esDeRapiña) {
+        super(caza, zarpado, dentado, tasaDeExito, caceriasMensuales);
+        this.envergadura = envergadura;
+        this.esDeRapiña = esDeRapiña;
+    }
+
+    public Float getEnvergadura() {
+        return envergadura;
+    }
+
+    public void setEnvergadura(Float envergadura) {
+        this.envergadura = envergadura;
+    }
+
+    public Boolean getEsDeRapiña() {
+        return esDeRapiña;
+    }
+
+    public void setEsDeRapiña(Boolean esDeRapiña) {
+        this.esDeRapiña = esDeRapiña;
+    }
 }
